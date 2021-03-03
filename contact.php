@@ -28,21 +28,21 @@ $subject  = $_POST['subject'];
 $comments = $_POST['comments'];
 $verify   = $_POST['verify'];
 
-// if(trim($first_name) == '') {
-// 	echo '<div class="error_message">Attention! You must enter your name.</div>';
-// 	exit();
-// }  else if(trim($email) == '') {
-// 	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
-// 	exit();
-// } else if(!isEmail($email)) {
-// 	echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
-// 	exit();
-// }
+if(trim($first_name) == '') {
+	echo '<div class="error_message">Attention! You must enter your name.</div>';
+	exit();
+}  else if(trim($email) == '') {
+	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
+	exit();
+} else if(!isEmail($email)) {
+	echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
+	exit();
+}
 
-// if(trim($comments) == '') {
-// 	echo '<div class="error_message">Attention! Please enter your message.</div>';
-// 	exit();
-// }
+if(trim($comments) == '') {
+	echo '<div class="error_message">Attention! Please enter your message.</div>';
+	exit();
+}
 
 if(get_magic_quotes_gpc()) {
 	$comments = stripslashes($comments);
