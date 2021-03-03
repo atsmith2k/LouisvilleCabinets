@@ -53,7 +53,7 @@ if(get_magic_quotes_gpc()) {
 }
 
 $e_subject = 'LC - Inquiry from ' . $first_name . ' ' . $last_name . '!';
-$e_body = 'You have been contacted by -' . $first_name . ' ' . $last_name . ' - ' . $email . ' - ' . $phone . PHP_EOL . PHP_EOL;
+$e_body = 'You have been contacted by ' . $first_name . ' ' . $last_name . ' - ' . $email . ' - ' . $phone . PHP_EOL . PHP_EOL;
 $e_content = '\'' . $comments .'\'' . PHP_EOL . PHP_EOL;
 
 $msg = wordwrap( $e_body . $e_content, 70 );
