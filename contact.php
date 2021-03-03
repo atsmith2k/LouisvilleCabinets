@@ -52,12 +52,11 @@ if(get_magic_quotes_gpc()) {
 	$comments = stripslashes($comments);
 }
 
-$e_subject = 'You\'ve been contacted by ' . $first_name . '.';
-$e_body = 'You have been contacted by ' . $first_name . '.' . $first_name . ' selected service of $select_service, their additional message is as follows. Customer max budge is ' . $select_price . ', for this project.' . PHP_EOL . PHP_EOL;
-$e_content = '\'$comments\'' . PHP_EOL . PHP_EOL;
-$e_reply = 'You can contact ' . $first_name . ' via email, ' . $email . ' or via phone $phone';
+$e_subject = 'LC - Inquiry from ' . $first_name . ' ' . $last_name . '!';
+$e_body = 'You have been contacted by \n' . $first_name . ' ' . $last_name . ' \n' . $email . ' \n' . $phone . PHP_EOL . PHP_EOL;
+$e_content = '\'' . $comments .'\'' . PHP_EOL . PHP_EOL;
 
-$msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
+$msg = wordwrap( $e_body . $e_content, 70 );
 // Replace sender@example.com with your 'From' address.
 // This address must be verified with Amazon SES.
 $sender = 'ashton@newtrostudios.com';
