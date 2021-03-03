@@ -59,6 +59,7 @@ $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 $sender = 'ashton@newtrostudios.com';
 $senderName = 'Louisville Cabinets';
 
+echo $msg;
 // Replace recipient@example.com with a 'To' address. If your account
 // is still in the sandbox, this address must be verified.
 $recipient = 'ashton@newtrostudios.com';
