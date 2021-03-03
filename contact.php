@@ -5,9 +5,13 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require '/vendor/phpmailer/phpmailer/src/Exception.php';
+require '/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '/vendor/phpmailer/phpmailer/src/SMTP.php';
+
 // If necessary, modify the path in the require statement below to refer to the
 // location of your Composer autoload.php file.
-require 'C:/Users/atsmith2k/vendor/autoload.php';
+require '/vendor/autoload.php';
 
 // if(!$_POST) exit;
 
@@ -28,21 +32,21 @@ $subject  = $_POST['subject'];
 $comments = $_POST['comments'];
 $verify   = $_POST['verify'];
 
-if(trim($first_name) == '') {
-	echo '<div class="error_message">Attention! You must enter your name.</div>';
-	exit();
-}  else if(trim($email) == '') {
-	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
-	exit();
-} else if(!isEmail($email)) {
-	echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
-	exit();
-}
+// if(trim($first_name) == '') {
+// 	echo '<div class="error_message">Attention! You must enter your name.</div>';
+// 	exit();
+// }  else if(trim($email) == '') {
+// 	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
+// 	exit();
+// } else if(!isEmail($email)) {
+// 	echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
+// 	exit();
+// }
 
-if(trim($comments) == '') {
-	echo '<div class="error_message">Attention! Please enter your message.</div>';
-	exit();
-}
+// if(trim($comments) == '') {
+// 	echo '<div class="error_message">Attention! Please enter your message.</div>';
+// 	exit();
+// }
 
 if(get_magic_quotes_gpc()) {
 	$comments = stripslashes($comments);
