@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 // location of your Composer autoload.php file.
 require 'C:/Users/atsmith2k/vendor/autoload.php';
 
-if(!$_POST) exit;
+// if(!$_POST) exit;
 
 // Email address verification, do not edit.
 function isEmail($email) {
