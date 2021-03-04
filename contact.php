@@ -68,10 +68,10 @@ echo $msg;
 $recipient = 'ashton@newtrostudios.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-$usernameSmtp = 'AKIARRXL7UGNQW6QYCVL';
+// $usernameSmtp = 'AKIARRXL7UGNQW6QYCVL';
 
 // Replace smtp_password with your Amazon SES SMTP password.
-$passwordSmtp = 'BPqyx9OClh3bdnwh0cw7lESR8Rmnm2UWD2AuayxjGugh';
+// $passwordSmtp = 'BPqyx9OClh3bdnwh0cw7lESR8Rmnm2UWD2AuayxjGugh';
 
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment or remove the next line.
